@@ -43,7 +43,7 @@ class elasticsearch::repo {
         key         => '46095ACC8548582C1A2699A9D27D666CD88E42B4',
         key_source  => 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch',
         include_src => false,
-        unless      => 'dpkg -l | grep elasticsearch |wc -l',
+        unless      => 'dpkg -l | grep elasticsearch |wc -l > 0',
       }
     }
     'RedHat', 'Linux': {
